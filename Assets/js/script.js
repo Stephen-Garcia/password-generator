@@ -8,9 +8,34 @@ function generatePassword() {
   var specialCharacters = '!@#$%^&*()*+,-./:;<=>?@>';
   var passwords = '';
   var usableCharacters = '';
+
+  var passwordLength = promt('Please choose a password length betweeen 8 and 128 characters.');
+
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    console.log(passwordLength);
+  }
+  else {
+    alert('Please select a password length betweeen 8 and 128 characters. Previous selected is invalid.');
+    return '';
+  };
+
+  var numQuestion = confirm('Do you want to use a number between 0 and 9 for your password?');
+  var lowerQuestion = confirm('Do you want to use lowercase letters in your password');
+  var upperQuestion = confirm('Do you want to use uppercase letters for your password?');
+  var specialQuestion = confirm('Do you want to use special characters for your password?');
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
 
 // Write password to the #password input
 function writePassword() {
