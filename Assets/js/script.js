@@ -44,7 +44,11 @@ function generatePassword() {
     return alert('You must select at least one character.');
   };
 
-  
+  for (let i = 0; i < passwordLength; i++) {
+    password += usableCharacters[Math.floor(Math.random() * usableCharacters.length)];
+  }
+  return password;
+};
 
 
 
