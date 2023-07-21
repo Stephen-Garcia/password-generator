@@ -2,11 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  var number = '0123456789';
+  var numbers = '0123456789';
   var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
   var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var specialCharacters = '!@#$%^&*()*+,-./:;<=>?@>';
-  var passwords = '';
+  var password = '';
   var usableCharacters = '';
 
   var passwordLength = promt('Please choose a password length betweeen 8 and 128 characters.');
@@ -24,6 +24,27 @@ function generatePassword() {
   var upperQuestion = confirm('Do you want to use uppercase letters for your password?');
   var specialQuestion = confirm('Do you want to use special characters for your password?');
 
+  if (numQuestion) {
+    usableCharacters += numbers
+  }
+
+  if (lowerQuestion) {
+    usableCharacters += lowerCase
+  }
+
+  if (upperQuestion) {
+    usableCharacters += upperCase
+  }
+
+  if (specialQuestion) {
+    usableCharacters += specialCharacters
+  }
+
+  if (!numQuestion && !lowerQuestion && !upperQuestion && !specialQuestion) {
+    return alert('You must select at least one character.');
+  };
+
+  
 
 
 
