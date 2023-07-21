@@ -51,7 +51,7 @@ function generatePassword() {
     usableCharacters += specialCharacters;
   }
 
-  if (!numQuestion && !lowerQuestion && !upperQuestion && !specialQuestion) {
+  if (!numQuestion && !lowerQuestion && upperQuestion && specialQuestion) {
     return alert("You must select at least one character.");
   }
 
