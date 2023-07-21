@@ -4,7 +4,7 @@ This is a simple password generator that I made using JavaScript.
 
 ## Screenshot
 
-![Screenshot](Assets\Images\03-javascript-homework-demo.png)
+![Screenshot](Images\03-javascript-homework-demo.png)
 
 ## Github link
 https://stephen-garcia.github.io/password-generator/
